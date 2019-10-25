@@ -2,7 +2,7 @@
 
 ## 1.1 运行时数据区域
 
-![](D:\Workspace\Java\learn-notes\Java\images\memory-area.jpg)
+![](../../images/memory-area.jpg)
 
 ### 1.1.1 程序计数器
 
@@ -69,7 +69,7 @@
 
 在HotSpot虚拟机中, 对象在内存中存储的布局可以分为3块区域: 对象头(Header), 实例数据(Instance Data), 对齐填充(Padding)
 
-![java-object-structure](D:\Workspace\Java\learn-notes\Java\images\java-object-structure.jpg)
+![java-object-structure](../../images/java-object-structure.jpg)
 
 ### 1.2.1 对象头
 
@@ -87,11 +87,11 @@ HotSpot虚拟机的对象头包括两部分信息. 第一部分是存储对象�
 
 **32位虚拟机对象头**
 
-![](D:\Workspace\Java\learn-notes\Java\images\java-object-header32.jpg)
+![](../../images/java-object-header32.jpg)
 
 **64位虚拟机对象头**
 
-![](D:\Workspace\Java\learn-notes\Java\images\java-object-header64.jpg)
+![](../../images/java-object-header64.jpg)
 
 ### 1.2.2 对象的访问定位
 
@@ -99,11 +99,11 @@ Java程序通过栈上的reference数据操作堆上的具体对象, 目前主�
 
 使用句柄访问, Java堆中将会划分出一块内存来作为句柄池，reference中存储的就是对象的句柄地址，而句柄中包含了对象实例数据和类型数据各自的具体地址信息
 
-![](D:\Workspace\Java\learn-notes\Java\images\java-object-reference-handle.jpg)
+![](../../images/java-object-reference-handle.jpg)
 
 如果使用的是直接指针访问方式，Java 堆对象的布局中就必须考虑如何放置访问类型数据的相关信息，reference中直接存储的就是对象地址
 
-![](D:\Workspace\Java\learn-notes\Java\images\java-object-reference-direct.jpg)
+![](../../images/java-object-reference-direct.jpg)
 
 使用句柄访问的最大好处是reference中存储的是稳定的句柄地址, 在对象被移动()时, 只会改变句柄中的实例数据指针, 而reference不需要改变.
 
