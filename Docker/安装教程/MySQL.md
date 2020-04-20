@@ -124,7 +124,7 @@ docker ps -a
 
 ```docker exec -it mysql bash
 docker exec -it mysql bash
-mysqld -uroot -p
+mysql -uroot -p
 ```
 
 执行`docker exec`进入容器, 执行`mysqld`命令连接mysql, 输入密码后, 连接完成
